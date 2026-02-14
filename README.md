@@ -1,5 +1,7 @@
 # Tale of Immortal Discord Rich Presence (Vietnamese)
 
+![Preview Image](example.png)
+
 A Discord Rich Presence mod for "Tale of Immortal" (Quỷ Cốc Bát Hoang) localized in Vietnamese.
 
 ## Features
@@ -11,7 +13,7 @@ A Discord Rich Presence mod for "Tale of Immortal" (Quỷ Cốc Bát Hoang) loca
 
 ## Files
 - `TOI_RPC.dll`: The main mod assembly (Place in `Mods` folder).
-- `discord-rpc.dll`: Native Discord library (Place in game root or `Mods` folder if needed).
+- `discord-rpc.dll`: Native Discord library (Place in game root or `Mods` folder).
 - `Main.cs`: Source code for the mod.
 - `DiscordRpc.cs`: Native wrapper.
 - `TOI_RPC.csproj`: Visual Studio Project file.
