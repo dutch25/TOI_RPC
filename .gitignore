@@ -1,0 +1,11 @@
+bin/
+obj/
+.vs/
+*.user
+*.log
+.gemini/
+.agent/
+brain/
+implementation_plan.md
+task.md
+walkthrough.md
