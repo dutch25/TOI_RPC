@@ -170,7 +170,18 @@ namespace TOI_RPC
 
         private string GetRealmName(int gradeId)
         {
-            int realmGrade = (gradeId - 1) / 3 + 1;
+            int realmGrade;
+            if (gradeId <= 3) realmGrade = 1;
+            else if (gradeId <= 8) realmGrade = 2;
+            else if (gradeId <= 11) realmGrade = 3;
+            else if (gradeId <= 18) realmGrade = 4;
+            else if (gradeId <= 21) realmGrade = 5;
+            else if (gradeId <= 26) realmGrade = 6;
+            else if (gradeId <= 29) realmGrade = 7;
+            else if (gradeId <= 35) realmGrade = 8;
+            else if (gradeId <= 38) realmGrade = 9;
+            else realmGrade = 10;
+
             int phase = (gradeId - 1) % 3 + 1;
 
             string phaseName;
