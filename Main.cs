@@ -170,43 +170,58 @@ namespace TOI_RPC
 
         private string GetRealmName(int gradeId)
         {
-            int realmGrade;
-            if (gradeId <= 3) realmGrade = 1;
-            else if (gradeId <= 8) realmGrade = 2;
-            else if (gradeId <= 11) realmGrade = 3;
-            else if (gradeId <= 18) realmGrade = 4;
-            else if (gradeId <= 21) realmGrade = 5;
-            else if (gradeId <= 26) realmGrade = 6;
-            else if (gradeId <= 29) realmGrade = 7;
-            else if (gradeId <= 35) realmGrade = 8;
-            else if (gradeId <= 38) realmGrade = 9;
-            else realmGrade = 10;
-
-            int phase = (gradeId - 1) % 3 + 1;
-
-            string phaseName;
-            switch (phase)
-            {
-                case 1: phaseName = "Sơ Kỳ"; break;
-                case 2: phaseName = "Trung Kỳ"; break;
-                case 3: phaseName = "Hậu Kỳ"; break;
-                default: phaseName = ""; break;
-            }
-
             string realmName;
-            switch (realmGrade)
+            string phaseName;
+
+            if (gradeId <= 3)
             {
-                case 1: realmName = "Luyện Khí Cảnh"; break;
-                case 2: realmName = "Trúc Cơ Cảnh"; break;
-                case 3: realmName = "Trúc Cơ Cảnh"; break;
-                case 4: realmName = "Kết Tinh Cảnh"; break;
-                case 5: realmName = "Kim Đan Cảnh"; break;
-                case 6: realmName = "Kim Đan Cảnh"; break;
-                case 7: realmName = "Cụ Linh Cảnh"; break;
-                case 8: realmName = "Nguyên Anh Cảnh"; break;
-                case 9: realmName = "Hoá Thần Cảnh"; break;
-                case 10: realmName = "Đăng Tiên Cảnh"; break;
-                default: realmName = "Cảnh giới " + realmGrade; break;
+                realmName = "Luyện Khí Cảnh";
+                phaseName = gradeId == 1 ? "Sơ Kỳ" : (gradeId == 2 ? "Trung Kỳ" : "Hậu Kỳ");
+            }
+            else if (gradeId <= 8)
+            {
+                realmName = "Trúc Cơ Cảnh";
+                phaseName = gradeId <= 5 ? "Sơ Kỳ" : (gradeId <= 7 ? "Trung Kỳ" : "Hậu Kỳ");
+            }
+            else if (gradeId <= 11)
+            {
+                realmName = "Trúc Cơ Cảnh";
+                phaseName = gradeId <= 9 ? "Sơ Kỳ" : (gradeId <= 10 ? "Trung Kỳ" : "Hậu Kỳ");
+            }
+            else if (gradeId <= 18)
+            {
+                realmName = "Kết Tinh Cảnh";
+                phaseName = gradeId <= 13 ? "Sơ Kỳ" : (gradeId <= 15 ? "Trung Kỳ" : "Hậu Kỳ");
+            }
+            else if (gradeId <= 21)
+            {
+                realmName = "Kim Đan Cảnh";
+                phaseName = gradeId == 19 ? "Sơ Kỳ" : (gradeId == 20 ? "Trung Kỳ" : "Hậu Kỳ");
+            }
+            else if (gradeId <= 26)
+            {
+                realmName = "Kim Đan Cảnh";
+                phaseName = gradeId <= 23 ? "Sơ Kỳ" : (gradeId <= 24 ? "Trung Kỳ" : "Hậu Kỳ");
+            }
+            else if (gradeId <= 29)
+            {
+                realmName = "Cụ Linh Cảnh";
+                phaseName = gradeId == 27 ? "Sơ Kỳ" : (gradeId == 28 ? "Trung Kỳ" : "Hậu Kỳ");
+            }
+            else if (gradeId <= 35)
+            {
+                realmName = "Nguyên Anh Cảnh";
+                phaseName = gradeId <= 32 ? "Sơ Kỳ" : (gradeId <= 33 ? "Trung Kỳ" : "Hậu Kỳ");
+            }
+            else if (gradeId <= 38)
+            {
+                realmName = "Hoá Thần Cảnh";
+                phaseName = gradeId == 36 ? "Sơ Kỳ" : (gradeId == 37 ? "Trung Kỳ" : "Hậu Kỳ");
+            }
+            else
+            {
+                realmName = "Đăng Tiên Cảnh";
+                phaseName = gradeId <= 42 ? "Sơ Kỳ" : (gradeId == 43 ? "Trung Kỳ" : "Hậu Kỳ");
             }
 
             return realmName + " (" + phaseName + ")";
