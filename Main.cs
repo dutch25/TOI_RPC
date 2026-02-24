@@ -170,9 +170,10 @@ namespace TOI_RPC
 
         private string GetRealmName(int grade)
         {
-            // Normalizing grade if it's from an offset save (e.g., 12 becomes 1)
             int normalizedGrade = grade;
-            if (grade >= 12) {
+            if (grade > 30) {
+                normalizedGrade = grade - 14;
+            } else if (grade >= 12) {
                 normalizedGrade = grade - 11;
             }
 
@@ -208,15 +209,6 @@ namespace TOI_RPC
                 case 28: return "Đăng Tiên Cảnh (Sơ Kỳ)";
                 case 29: return "Đăng Tiên Cảnh (Trung Kỳ)";
                 case 30: return "Đăng Tiên Cảnh (Hậu Kỳ)";
-                case 31: return "Địa Tiên Cảnh (Sơ Kỳ)";
-                case 32: return "Địa Tiên Cảnh (Trung Kỳ)";
-                case 33: return "Địa Tiên Cảnh (Hậu Kỳ)";
-                case 34: return "Thiên Tiên Cảnh (Sơ Kỳ)";
-                case 35: return "Thiên Tiên Cảnh (Trung Kỳ)";
-                case 36: return "Thiên Tiên Cảnh (Hậu Kỳ)";
-                case 37: return "Chân Tiên Cảnh (Sơ Kỳ)";
-                case 38: return "Chân Tiên Cảnh (Trung Kỳ)";
-                case 39: return "Chân Tiên Cảnh (Hậu Kỳ)";
                 default: return $"Cảnh giới {grade}";
             }
         }
