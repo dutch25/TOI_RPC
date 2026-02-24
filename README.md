@@ -1,6 +1,7 @@
 # Tale of Immortal Discord Rich Presence Mod (Vietnamese)
 
-![Preview Image](example.png)
+<img src="example.png" width="600">
+
 ![GitHub Views](https://komarev.com/ghpvc/?username=dutch25&repo=TOI_RPC)
 
 **Tale of Immortal Discord RPC Mod** - A Discord Rich Presence mod for "Tale of Immortal" (Quỷ Cốc Bát Hoang / 鬼谷八荒) localized in Vietnamese. Works with MelonLoader.
