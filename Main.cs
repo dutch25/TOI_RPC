@@ -170,45 +170,52 @@ namespace TOI_RPC
 
         private string GetRealmName(int grade)
         {
-            int normalizedGrade = grade;
-            if (grade > 30) {
-                normalizedGrade = grade - 14;
-            } else if (grade >= 12) {
-                normalizedGrade = grade - 11;
-            }
-
-            switch (normalizedGrade)
+            switch (grade)
             {
                 case 1: return "Luyện Khí Cảnh (Sơ Kỳ)";
                 case 2: return "Luyện Khí Cảnh (Trung Kỳ)";
                 case 3: return "Luyện Khí Cảnh (Hậu Kỳ)";
-                case 4: return "Trúc Cơ Cảnh (Sơ Kỳ)";
-                case 5: return "Trúc Cơ Cảnh (Trung Kỳ)";
-                case 6: return "Trúc Cơ Cảnh (Hậu Kỳ)";
-                case 7: return "Kết Tinh Cảnh (Sơ Kỳ)";
-                case 8: return "Kết Tinh Cảnh (Trung Kỳ)";
-                case 9: return "Kết Tinh Cảnh (Hậu Kỳ)";
-                case 10: return "Kim Đan Cảnh (Sơ Kỳ)";
-                case 11: return "Kim Đan Cảnh (Trung Kỳ)";
-                case 12: return "Kim Đan Cảnh (Hậu Kỳ)";
-                case 13: return "Cụ Linh Cảnh (Sơ Kỳ)";
-                case 14: return "Cụ Linh Cảnh (Trung Kỳ)";
-                case 15: return "Cụ Linh Cảnh (Hậu Kỳ)";
-                case 16: return "Nguyên Anh Cảnh (Sơ Kỳ)";
-                case 17: return "Nguyên Anh Cảnh (Trung Kỳ)";
-                case 18: return "Nguyên Anh Cảnh (Hậu Kỳ)";
-                case 19: return "Hoá Thần Cảnh (Sơ Kỳ)";
-                case 20: return "Hoá Thần Cảnh (Trung Kỳ)";
-                case 21: return "Hoá Thần Cảnh (Hậu Kỳ)";
-                case 22: return "Ngộ Đạo Cảnh (Sơ Kỳ)";
-                case 23: return "Ngộ Đạo Cảnh (Trung Kỳ)";
-                case 24: return "Ngộ Đạo Cảnh (Hậu Kỳ)";
-                case 25: return "Vũ Hóa Cảnh (Sơ Kỳ)";
-                case 26: return "Vũ Hóa Cảnh (Trung Kỳ)";
-                case 27: return "Vũ Hóa Cảnh (Hậu Kỳ)";
-                case 28: return "Đăng Tiên Cảnh (Sơ Kỳ)";
-                case 29: return "Đăng Tiên Cảnh (Trung Kỳ)";
-                case 30: return "Đăng Tiên Cảnh (Hậu Kỳ)";
+                case 4:
+                case 5:
+                case 6:
+                case 7: return "Trúc Cơ Cảnh (Sơ Kỳ)";
+                case 8: return "Trúc Cơ Cảnh (Trung Kỳ)";
+                case 9:
+                case 10:
+                case 11: return "Trúc Cơ Cảnh (Hậu Kỳ)";
+                case 12:
+                case 13:
+                case 14:
+                case 15:
+                case 16: return "Kết Tinh Cảnh (Sơ Kỳ)";
+                case 17: return "Kết Tinh Cảnh (Trung Kỳ)";
+                case 18: return "Kết Tinh Cảnh (Hậu Kỳ)";
+                case 19:
+                case 20:
+                case 21: return "Kim Đan Cảnh (Sơ Kỳ)";
+                case 22:
+                case 23:
+                case 24:
+                case 25:
+                case 26: return "Kim Đan Cảnh (Trung Kỳ)";
+                case 27: return "Kim Đan Cảnh (Hậu Kỳ)";
+                case 28:
+                case 29: return "Cụ Linh Cảnh (Sơ Kỳ)";
+                case 30:
+                case 31:
+                case 32:
+                case 33:
+                case 34:
+                case 35: return "Cụ Linh Cảnh (Trung Kỳ)";
+                case 36:
+                case 37: return "Cụ Linh Cảnh (Hậu Kỳ)";
+                case 38:
+                case 39:
+                case 40:
+                case 41:
+                case 42: return "Nguyên Anh Cảnh (Sơ Kỳ)";
+                case 43: return "Nguyên Anh Cảnh (Trung Kỳ)";
+                case 44: return "Đăng Tiên Cảnh (Hậu Kỳ)";
                 default: return $"Cảnh giới {grade}";
             }
         }
