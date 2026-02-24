@@ -185,37 +185,37 @@ namespace TOI_RPC
             }
             else if (gradeId <= 11)
             {
-                realmName = "Trúc Cơ Cảnh";
+                realmName = "Kết Tinh Cảnh";
                 phaseName = gradeId <= 9 ? "Sơ Kỳ" : (gradeId <= 10 ? "Trung Kỳ" : "Hậu Kỳ");
             }
             else if (gradeId <= 18)
             {
-                realmName = "Kết Tinh Cảnh";
+                realmName = "Kim Đan Cảnh";
                 phaseName = gradeId <= 13 ? "Sơ Kỳ" : (gradeId <= 15 ? "Trung Kỳ" : "Hậu Kỳ");
             }
             else if (gradeId <= 21)
             {
-                realmName = "Kim Đan Cảnh";
+                realmName = "Cụ Linh Cảnh";
                 phaseName = gradeId == 19 ? "Sơ Kỳ" : (gradeId == 20 ? "Trung Kỳ" : "Hậu Kỳ");
             }
             else if (gradeId <= 26)
             {
-                realmName = "Kim Đan Cảnh";
+                realmName = "Nguyên Anh Cảnh";
                 phaseName = gradeId <= 23 ? "Sơ Kỳ" : (gradeId <= 24 ? "Trung Kỳ" : "Hậu Kỳ");
             }
             else if (gradeId <= 29)
             {
-                realmName = "Cụ Linh Cảnh";
+                realmName = "Hoá Thần Cảnh";
                 phaseName = gradeId == 27 ? "Sơ Kỳ" : (gradeId == 28 ? "Trung Kỳ" : "Hậu Kỳ");
             }
             else if (gradeId <= 35)
             {
-                realmName = "Nguyên Anh Cảnh";
+                realmName = "Ngộ Đạo Cảnh";
                 phaseName = gradeId <= 32 ? "Sơ Kỳ" : (gradeId <= 33 ? "Trung Kỳ" : "Hậu Kỳ");
             }
             else if (gradeId <= 38)
             {
-                realmName = "Hoá Thần Cảnh";
+                realmName = "Vũ Hóa Cảnh";
                 phaseName = gradeId == 36 ? "Sơ Kỳ" : (gradeId == 37 ? "Trung Kỳ" : "Hậu Kỳ");
             }
             else
