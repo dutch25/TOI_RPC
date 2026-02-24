@@ -181,17 +181,21 @@ namespace TOI_RPC
             else if (gradeId <= 8)
             {
                 realmName = "Trúc Cơ Cảnh";
-                phaseName = gradeId <= 5 ? "Sơ Kỳ" : (gradeId <= 7 ? "Trung Kỳ" : "Hậu Kỳ");
+                if (gradeId <= 6) phaseName = "Sơ Kỳ";
+                else if (gradeId == 7) phaseName = "Trung Kỳ";
+                else phaseName = "Hậu Kỳ";
             }
             else if (gradeId <= 11)
             {
                 realmName = "Kết Tinh Cảnh";
-                phaseName = gradeId <= 9 ? "Sơ Kỳ" : (gradeId <= 10 ? "Trung Kỳ" : "Hậu Kỳ");
+                phaseName = gradeId == 9 ? "Sơ Kỳ" : (gradeId == 10 ? "Trung Kỳ" : "Hậu Kỳ");
             }
             else if (gradeId <= 18)
             {
                 realmName = "Kim Đan Cảnh";
-                phaseName = gradeId <= 13 ? "Sơ Kỳ" : (gradeId <= 15 ? "Trung Kỳ" : "Hậu Kỳ");
+                if (gradeId <= 16) phaseName = "Sơ Kỳ";
+                else if (gradeId == 17) phaseName = "Trung Kỳ";
+                else phaseName = "Hậu Kỳ";
             }
             else if (gradeId <= 21)
             {
@@ -201,7 +205,9 @@ namespace TOI_RPC
             else if (gradeId <= 26)
             {
                 realmName = "Nguyên Anh Cảnh";
-                phaseName = gradeId <= 23 ? "Sơ Kỳ" : (gradeId <= 24 ? "Trung Kỳ" : "Hậu Kỳ");
+                if (gradeId <= 24) phaseName = "Sơ Kỳ";
+                else if (gradeId == 25) phaseName = "Trung Kỳ";
+                else phaseName = "Hậu Kỳ";
             }
             else if (gradeId <= 29)
             {
@@ -211,7 +217,9 @@ namespace TOI_RPC
             else if (gradeId <= 35)
             {
                 realmName = "Ngộ Đạo Cảnh";
-                phaseName = gradeId <= 32 ? "Sơ Kỳ" : (gradeId <= 33 ? "Trung Kỳ" : "Hậu Kỳ");
+                if (gradeId <= 32) phaseName = "Sơ Kỳ";
+                else if (gradeId == 33) phaseName = "Trung Kỳ";
+                else phaseName = "Hậu Kỳ";
             }
             else if (gradeId <= 38)
             {
@@ -221,7 +229,9 @@ namespace TOI_RPC
             else
             {
                 realmName = "Đăng Tiên Cảnh";
-                phaseName = gradeId <= 42 ? "Sơ Kỳ" : (gradeId == 43 ? "Trung Kỳ" : "Hậu Kỳ");
+                if (gradeId <= 42) phaseName = "Sơ Kỳ";
+                else if (gradeId == 43) phaseName = "Trung Kỳ";
+                else phaseName = "Hậu Kỳ";
             }
 
             return realmName + " (" + phaseName + ")";
