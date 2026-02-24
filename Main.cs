@@ -168,56 +168,37 @@ namespace TOI_RPC
             }
         }
 
-        private string GetRealmName(int grade)
+        private string GetRealmName(int gradeId)
         {
-            switch (grade)
+            int realmGrade = (gradeId - 1) / 3 + 1;
+            int phase = (gradeId - 1) % 3 + 1;
+
+            string phaseName;
+            switch (phase)
             {
-                case 1: return "Luyện Khí Cảnh (Sơ Kỳ)";
-                case 2: return "Luyện Khí Cảnh (Trung Kỳ)";
-                case 3: return "Luyện Khí Cảnh (Hậu Kỳ)";
-                case 4:
-                case 5:
-                case 6:
-                case 7: return "Trúc Cơ Cảnh (Sơ Kỳ)";
-                case 8: return "Trúc Cơ Cảnh (Trung Kỳ)";
-                case 9:
-                case 10:
-                case 11: return "Trúc Cơ Cảnh (Hậu Kỳ)";
-                case 12:
-                case 13:
-                case 14:
-                case 15:
-                case 16: return "Kết Tinh Cảnh (Sơ Kỳ)";
-                case 17: return "Kết Tinh Cảnh (Trung Kỳ)";
-                case 18: return "Kết Tinh Cảnh (Hậu Kỳ)";
-                case 19:
-                case 20:
-                case 21: return "Kim Đan Cảnh (Sơ Kỳ)";
-                case 22:
-                case 23:
-                case 24:
-                case 25:
-                case 26: return "Kim Đan Cảnh (Trung Kỳ)";
-                case 27: return "Kim Đan Cảnh (Hậu Kỳ)";
-                case 28:
-                case 29: return "Cụ Linh Cảnh (Sơ Kỳ)";
-                case 30:
-                case 31:
-                case 32:
-                case 33:
-                case 34:
-                case 35: return "Cụ Linh Cảnh (Trung Kỳ)";
-                case 36:
-                case 37: return "Cụ Linh Cảnh (Hậu Kỳ)";
-                case 38:
-                case 39:
-                case 40:
-                case 41:
-                case 42: return "Nguyên Anh Cảnh (Sơ Kỳ)";
-                case 43: return "Nguyên Anh Cảnh (Trung Kỳ)";
-                case 44: return "Đăng Tiên Cảnh (Hậu Kỳ)";
-                default: return $"Cảnh giới {grade}";
+                case 1: phaseName = "Sơ Kỳ"; break;
+                case 2: phaseName = "Trung Kỳ"; break;
+                case 3: phaseName = "Hậu Kỳ"; break;
+                default: phaseName = ""; break;
             }
+
+            string realmName;
+            switch (realmGrade)
+            {
+                case 1: realmName = "Luyện Khí Cảnh"; break;
+                case 2: realmName = "Trúc Cơ Cảnh"; break;
+                case 3: realmName = "Trúc Cơ Cảnh"; break;
+                case 4: realmName = "Kết Tinh Cảnh"; break;
+                case 5: realmName = "Kim Đan Cảnh"; break;
+                case 6: realmName = "Kim Đan Cảnh"; break;
+                case 7: realmName = "Cụ Linh Cảnh"; break;
+                case 8: realmName = "Nguyên Anh Cảnh"; break;
+                case 9: realmName = "Hoá Thần Cảnh"; break;
+                case 10: realmName = "Đăng Tiên Cảnh"; break;
+                default: realmName = "Cảnh giới " + realmGrade; break;
+            }
+
+            return realmName + " (" + phaseName + ")";
         }
 
         [HarmonyLib.HarmonyPatch(typeof(WorldMgr), "IntoWorld")]
